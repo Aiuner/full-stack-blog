@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const Post = new Schema(
   {
     title: { type: String, required: true },
+    imgURL: { type: String, required: true },
+    content: { type: String, required: true },
     author: { type: String, required: true },
-    body: { type: String, required: true },
-    img: { type: String, required: true },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("amoeba", Post);
+module.exports = mongoose.model("posts", Post);

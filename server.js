@@ -22,3 +22,7 @@ db.on(
 app.listen(PORT, () => {
   console.log(`We iz listening on port ${PORT}`);
 });
+
+app.get("/", (req, res) => {
+  res.send("YOU MADE IT TO THE ROOT BROH!");
+});
