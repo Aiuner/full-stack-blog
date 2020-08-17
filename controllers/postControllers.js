@@ -15,9 +15,9 @@ const getPosts = async (req, res) => {
 const getPost = async (req, res) => {
   try {
     const { id } = req.params;
-    const Post = await Post.findById(id);
-    if (Post) {
-      return res.json(Post);
+    const post = await Post.findById(id);
+    if (post) {
+      return res.json(post);
     }
     res.status(404).json({ message: "Post not found!" });
   } catch (error) {
@@ -27,9 +27,9 @@ const getPost = async (req, res) => {
 
 const createPost = async (req, res) => {
   try {
-    const Post = await new Post(req.body);
-    await Post.save();
-    res.status(201).json(Post);
+    const post = await new Post(req.body);
+    await post.save();
+    res.status(201).json(post);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });
