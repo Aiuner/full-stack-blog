@@ -17,7 +17,11 @@ const PostList = () => {
     <>
       <h1>butt</h1>
       <div className='posts'>
-        {Post}
+        {posts.map((post) => {
+          <>
+            <Post _id={post._id} imgURL={post.imageURL} content = {post.content} author={post.content} />
+        </>
+        })}
       </div>
       </>
   )
