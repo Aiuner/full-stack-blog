@@ -9,7 +9,7 @@ export const getPosts = async () => {
   }
 };
 
-const getPost = async (id) => {
+export const getPost = async (id) => {
   try {
     const response = await api.get(`/post/${id}`);
     return response.data;
@@ -18,7 +18,7 @@ const getPost = async (id) => {
   }
 };
 
-const editPost = async (id, post) => {
+export const editPost = async (id, post) => {
   try {
     const response = await api.put(`/post/${id}`, post);
     return response.data;
@@ -27,7 +27,7 @@ const editPost = async (id, post) => {
   }
 };
 
-const createPost = async (post) => {
+export const createPost = async (post) => {
   try {
     const response = await api.post("/post", post);
     return response.data;
@@ -36,7 +36,7 @@ const createPost = async (post) => {
   }
 };
 
-const deletePost = async (id) => {
+export const deletePost = async (id) => {
   try {
     const response = await api.delete(`/post/${id}`);
     return response.data;
