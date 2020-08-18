@@ -3,7 +3,7 @@ import { useParams, Redirect } from 'react-router-dom'
 import Layout from '../../components/shared/layout/Layout'
 import { getPost, editPost } from '../../services/posts'
 
-const editPost = (props) => {
+const Edit = (props) => {
   const [post, updatePost] = useState({
     imgURL = '',
     content = '',
@@ -84,4 +84,4 @@ const editPost = (props) => {
 
 }
 
-export default editPost 
+export default Edit 
