@@ -1,0 +1,21 @@
+nav {
+  position: fixed;
+  top: 0;
+
+  background-color: turquoise;
+  width: 100%;
+  border-bottom: solid pink;
+}
+
+.navLinks {
+  display: flex;
+  position: relative;;
+  right: 0;
+
+}
+
+li {
+
+  list-style: none;
+  padding: 10px;
+}
