@@ -1,12 +1,15 @@
 import React from 'react';
 import PostList from '../../components/postList/PostList'
-// import Layout from '../../shared/layout/Layout'
+import Nav from '../../components/shared/nav/Nav'
 
 const Home = () => {
   return (
+
     <div className='home'>
-      <PostList />
+      <Nav />
+        <PostList />
     </div>
+      
   )
 }
 
