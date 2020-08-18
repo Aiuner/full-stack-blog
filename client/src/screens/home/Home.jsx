@@ -1,16 +1,17 @@
 import React from 'react';
 import PostList from '../../components/postList/PostList'
-import Nav from '../../components/shared/nav/Nav'
+
+import Layout from '../../shared/layout/Layout'
 
 const Home = () => {
   return (
-
-    <div className='home'>
-      <Nav />
+    <Layout>
+      <div className='home'>
         <PostList />
-    </div>
-      
-  )
+      </div>
+    </Layout>
+  );
+
 }
 
 export default Home 
