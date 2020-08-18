@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createPost } from "../../services/posts";
 import { Redirect } from "react-router-dom";
+import Layout from "../../components/shared/layout/Layout";
 
 function Create() {
   const [post, setPost] = useState({
@@ -32,37 +33,39 @@ function Create() {
 
   return (
     <>
-      <div className="form-div">
-        <form onSubmit={handleSubmit}>
-          <h1>Create new post</h1>
-          <input
-            type="text"
-            placeholder="Title"
-            name="title"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="Image URL"
-            name="imgURL"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="Author"
-            name="author"
-            onChange={handleChange}
-          />
-          <textarea
-            placeholder="Write post here!"
-            name="content"
-            cols="30"
-            rows="10"
-            onChange={handleChange}
-          ></textarea>
-          <button type="submit">Submit Posts</button>
-        </form>
-      </div>
+      <Layout>
+        <div className="form-div">
+          <form onSubmit={handleSubmit}>
+            <h1>Create new post</h1>
+            <input
+              type="text"
+              placeholder="Title"
+              name="title"
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              placeholder="Image URL"
+              name="imgURL"
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              placeholder="Author"
+              name="author"
+              onChange={handleChange}
+            />
+            <textarea
+              placeholder="Write post here!"
+              name="content"
+              cols="30"
+              rows="10"
+              onChange={handleChange}
+            ></textarea>
+            <button type="submit">Submit Posts</button>
+          </form>
+        </div>
+      </Layout>
     </>
   );
 }
