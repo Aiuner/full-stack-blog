@@ -5,6 +5,7 @@ import { getPost, editPost } from '../../services/posts'
 
 const Edit = (props) => {
   const [post, updatePost] = useState({
+    title = '',
     imgURL = '',
     content = '',
     author = ''
@@ -22,10 +23,10 @@ const Edit = (props) => {
   }, [id])
 
   const handleChange = (event) => {
-    const { imgURL, value } = event.target 
+    const { name, value } = event.target 
     updatePost({
       ...post,
-      [imgURL]: value
+      [name]: value
     })
   }
 
@@ -46,6 +47,13 @@ const Edit = (props) => {
         <div className='image-container'>
           <img className='edit-post-image' src={post.imgURL} alt={post.name} />
           <form onSubmit={handleSubmit}>
+            <input
+              type='text'
+              placeholder='title'
+              name='title'
+              required
+              onChange={handleChange}>
+            </input>
             <input
               className='edit-input-image-link'
               placeholder='Put Your Pic heere'
