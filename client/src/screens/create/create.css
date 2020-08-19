@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 .form-div {
   display: flex;
   flex-direction: column;
@@ -6,13 +6,12 @@
 }
 
 h1 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-size: 42px;
   letter-spacing: 3px;
   color: rgb(64, 224, 209);
   text-decoration-line: underline;
   text-decoration-color: rgb(255, 193, 202);
-  ;
 }
 
 form {
@@ -46,6 +45,9 @@ textarea {
   text-align: center;
   font-size: 20px;
 }
+textarea:focus::placeholder {
+  color: transparent;
+}
 
 button {
   margin: 10px 0 30px 0;
@@ -56,11 +58,11 @@ button {
   background-color: rgb(64, 224, 209);
   border: none;
   color: #fff;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
 button:hover {
   background-color: rgb(255, 193, 202);
-  transform: scale(1.1)
+  transform: scale(1.1);
 }

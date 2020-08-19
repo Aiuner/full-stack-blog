@@ -1,0 +1,31 @@
+.titleTags {
+  text-align: center;
+}
+
+.pTags {
+  text-align: justify;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.post-img {
+  margin: 0 auto;
+  max-width: 70%;
+  height: auto;
+}
+
+.btn-PV {
+  margin: 20px 25px;
+}

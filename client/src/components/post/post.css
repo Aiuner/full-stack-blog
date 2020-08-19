@@ -10,16 +10,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  
+  min-width: 300px;
 }
 
-
 .post-card h2 {
- 
   top: 50%;
   margin: 0;
   width: 100%;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   background-color: pink;
   opacity: 5;
   height: 100%;
@@ -28,12 +26,12 @@
   font-size: 30px;
   text-align: center;
   border-radius: inherit;
-  font-size: 60px;
+  font-size: 3.5vw;
 }
 
 .post-card h3 {
   display: none;
-  ont-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
 }
 
 .post-card:hover {
@@ -48,18 +46,16 @@
   padding: revert;
   height: revert;
   border-radius: revert;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .post-card:hover h3 {
-
-  opacity: .9;
+  opacity: 0.9;
   display: revert;
   margin: 0;
   width: 100%;
   text-align: center;
   background-color: turquoise;
-  
 }
 
 .post-card img {
@@ -71,4 +67,3 @@ a {
   color: white;
   text-decoration: none;
 }
-
