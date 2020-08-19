@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Post from "../post/Post.jsx";
 import { getPosts } from "../../services/posts";
+import {Link} from 'react-router-dom'
+
+import './PostList.css'
 
 const PostList = () => {
   const [posts, updatePosts] = useState([]);
@@ -15,17 +18,19 @@ const PostList = () => {
 
   return (
     <>
-      <h1>butt</h1>
+      <h1>Butt</h1>
       <div className="posts">
         {posts.map((post) => {
           return (
             <>
+              <Link to={`/posts/${post._id}`}>
               <Post
                 _id={post._id}
-                imgURL={post.imageURL}
-                content={post.content}
-                author={post.content}
+                title={post.title}
+                imgURL={post.imgURL}
+                author={post.author}
               />
+              </Link>
             </>
           );
         })}

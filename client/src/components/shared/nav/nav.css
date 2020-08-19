@@ -1,21 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 nav {
   position: fixed;
+  display: flex;
   top: 0;
-
   background-color: turquoise;
   width: 100%;
+  max-height: 50px;
   border-bottom: solid pink;
+  align-items: center;
+  z-index: 1000;
 }
 
 .navLinks {
-  display: flex;
-  position: relative;;
-  right: 0;
-
+display: flex;
 }
 
 li {
-
   list-style: none;
-  padding: 10px;
+  padding-right: 40px;
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+}
+
+nav a:hover {
+  color: pink;
+ 
 }
