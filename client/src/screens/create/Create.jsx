@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createPost } from "../../services/posts";
 import { Redirect } from "react-router-dom";
 import Layout from "../../components/shared/layout/Layout";
+import "./create.css";
 
 function Create() {
   const [post, setPost] = useState({
@@ -42,18 +43,21 @@ function Create() {
               placeholder="Title"
               name="title"
               onChange={handleChange}
+              autoComplete="off"
             />
             <input
               type="text"
               placeholder="Image URL"
               name="imgURL"
               onChange={handleChange}
+              autoComplete="off"
             />
             <input
               type="text"
               placeholder="Author"
               name="author"
               onChange={handleChange}
+              autoComplete="off"
             />
             <textarea
               placeholder="Write post here!"
@@ -61,6 +65,7 @@ function Create() {
               cols="30"
               rows="10"
               onChange={handleChange}
+              autoComplete="off"
             ></textarea>
             <button type="submit">Submit Posts</button>
           </form>
