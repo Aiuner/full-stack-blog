@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.form-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 42px;
+  letter-spacing: 3px;
+  color: rgb(64, 224, 209);
+  text-decoration-line: underline;
+  text-decoration-color: rgb(255, 193, 202);
+  ;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 20px;
+  height: 20px;
+  width: 40%;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 25px;
+  outline: none;
+  font-weight: 700;
+  padding: 5px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+textarea {
+  margin: 20px;
+  border: 2px solid black;
+  width: 60%;
+  text-align: center;
+  font-size: 20px;
+}
+
+button {
+  margin: 10px 0 30px 0;
+  width: 20%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(64, 224, 209);
+  border: none;
+  color: #fff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 193, 202);
+  transform: scale(1.1)
+}
