@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import Layout from "../../components/shared/layout/Layout";
 import { getPost, editPost } from "../../services/posts";
+import "./edit.css";
 
 const Edit = (props) => {
   const [post, updatePost] = useState({
@@ -46,25 +47,26 @@ const Edit = (props) => {
       <div className="post-edit">
         <div className="image-container">
           <img className="edit-post-image" src={post.imgURL} alt={post.name} />
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="title"
-              value={post.title}
-              name="title"
-              required
-              onChange={handleChange}
-            ></input>
-            <input
-              className="edit-input-image-link"
-              placeholder="Put Your Pic heere"
-              value={post.imgURL}
-              name="imgURL"
-              required
-              onChange={handleChange}
-            />
-          </form>
         </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="title"
+            value={post.title}
+            name="title"
+            required
+            onChange={handleChange}
+          ></input>
+          <input
+            className="edit-input-image-link"
+            placeholder="Put Your Pic heere"
+            value={post.imgURL}
+            name="imgURL"
+            required
+            onChange={handleChange}
+          />
+        </form>
+
         <form className="edit-form" onSubmit={handleSubmit}>
           <textarea
             className="textarea-description"
