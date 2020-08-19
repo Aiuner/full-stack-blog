@@ -50,6 +50,7 @@ const Edit = (props) => {
             <input
               type="text"
               placeholder="title"
+              value={post.title}
               name="title"
               required
               onChange={handleChange}

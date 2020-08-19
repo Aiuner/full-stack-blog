@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { getPost } from "../../services/posts";
+import { useParams, Link, Redirect } from "react-router-dom";
+import { getPost, deletePost } from "../../services/posts";
 import Layout from "../../components/shared/layout/Layout";
 
 function PostView() {
-  const [post, updatePost] = useState({});
+  const [post, updatePost] = useState({})
+  const [isDeleted, updateIsdDelete] = useState(false)
+  
 
   const { id } = useParams();
 
@@ -15,6 +17,15 @@ function PostView() {
     };
     fetchPost();
   }, []);
+
+  const handleDeletePost = async (e) => {
+    e.preventDefault()
+    const deleted = await deletePost(post.id)
+    updateIsdDelete({ deleted })
+  }
+
+  if (isDeleted) return <Redirect to={`/`} />
+  
 
   return (
     <>
@@ -27,6 +38,7 @@ function PostView() {
       <Link to={`/posts/${post._id}/edit`}>
         <button>PRESSS MEEEE TO EDITTT</button>
       </Link>
+      <button onClick={handleDeletePost}>DELETE MEEEEE</button>
     </>
   );
 }
