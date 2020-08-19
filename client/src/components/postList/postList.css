@@ -1,0 +1,16 @@
+.posts {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  color: turquoise;
+  text-decoration: underline;
+  text-decoration-color: pink;
+  text-align: center;
+}
+
