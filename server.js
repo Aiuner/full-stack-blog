@@ -5,7 +5,7 @@ const logger = require("morgan");
 const postRoutes = require("./routes/postRoutes");
 const db = require("./db/connection");
 
-const PORT = process.env.PORT || 3000;
+const Port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -19,7 +19,7 @@ db.on(
   console.error.bind(console, "MongoDB is muthafuckin down homie!")
 );
 
-app.listen(PORT, () => {
+app.listen(Port, () => {
   console.log(`We iz listening on port ${PORT}`);
 });
 
